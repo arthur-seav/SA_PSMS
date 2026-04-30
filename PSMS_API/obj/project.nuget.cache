@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "sFaxI2dTV7A=",
+  "success": true,
+  "projectFilePath": "/home/arthur-s2048/Orion Commonwealth/Libraries/SV34/System Analysis/SA_PSMS/PSMS_API/PSMS_API.csproj",
+  "expectedPackageFiles": [
+    "/home/arthur-s2048/.nuget/packages/microsoft.aspnetcore.openapi/10.0.4/microsoft.aspnetcore.openapi.10.0.4.nupkg.sha512",
+    "/home/arthur-s2048/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
