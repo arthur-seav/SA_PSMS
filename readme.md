@@ -24,3 +24,11 @@ This project is a class work project from a group of student of SETEC Institute.
 - (Keep Updating...)
 
 ---
+
+## IMPORTANCE
+
+to connect database with API project, please add & configure **[database name] & [password]** connectionString in file: **appsettings.Development.json**. to configure connectionString, please follow read example file in folder: **ExampleDoc**.
+
+## Notes
+
+- symbol **[ ]** use as the mark to notify that the data/variable need to replace.

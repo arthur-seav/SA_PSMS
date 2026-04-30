@@ -1,0 +1,9 @@
+# ===== ASP.NET Core =====
+PSMS_API/bin/
+PSMS_API/obj/
+PSMS_API/appsettings.Development.json
+
+# ===== Angular =====
+frontend/node_modules/
+frontend/.angular/
+frontend/dist/
