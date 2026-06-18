@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/arthur-s2048/Orion Commonwealth/Libraries/SV34/System Analysis/SA_PSMS/PSMS_API/PSMS_API.csproj": {}
+    "/home/ArgoVesta/SV34/System Analysis/SA_PSMS/PSMS_API/PSMS_API.csproj": {}
   },
   "projects": {
-    "/home/arthur-s2048/Orion Commonwealth/Libraries/SV34/System Analysis/SA_PSMS/PSMS_API/PSMS_API.csproj": {
+    "/home/ArgoVesta/SV34/System Analysis/SA_PSMS/PSMS_API/PSMS_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/arthur-s2048/Orion Commonwealth/Libraries/SV34/System Analysis/SA_PSMS/PSMS_API/PSMS_API.csproj",
+        "projectUniqueName": "/home/ArgoVesta/SV34/System Analysis/SA_PSMS/PSMS_API/PSMS_API.csproj",
         "projectName": "PSMS_API",
-        "projectPath": "/home/arthur-s2048/Orion Commonwealth/Libraries/SV34/System Analysis/SA_PSMS/PSMS_API/PSMS_API.csproj",
+        "projectPath": "/home/ArgoVesta/SV34/System Analysis/SA_PSMS/PSMS_API/PSMS_API.csproj",
         "packagesPath": "/home/arthur-s2048/.nuget/packages/",
-        "outputPath": "/home/arthur-s2048/Orion Commonwealth/Libraries/SV34/System Analysis/SA_PSMS/PSMS_API/obj/",
+        "outputPath": "/home/ArgoVesta/SV34/System Analysis/SA_PSMS/PSMS_API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/arthur-s2048/.nuget/NuGet/NuGet.Config"
@@ -45,9 +45,27 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[10.0.9, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[10.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.9, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[10.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -73,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.106/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.108/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
