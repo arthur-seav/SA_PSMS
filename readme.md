@@ -12,11 +12,11 @@ This project is a class work project from a group of student of SETEC Institute.
 
 ### Back-end (included API)
 
-- ASP.NetCore SDK version 10.0.104
-- Npgsql.EntityFrameworkCore.PostgreSQL version 10.0.2
-- Microsoft.EntityFrameworkCore.Design version 10.0.9
-- Microsoft.AspNetCore.Authentication.JwtBearer version 10.0.9
-- BCrypt.Net-Next version 4.2.0
+- **ASP.NetCore SDK** version 10.0.104
+- **Npgsql.EntityFrameworkCore.PostgreSQL** version 10.0.2
+- **Microsoft.EntityFrameworkCore.Design** version 10.0.9
+- **Microsoft.AspNetCore.Authentication.JwtBearer** version 10.0.9
+- **BCrypt.Net-Next** version 4.2.0
 
 ### DATABASE
 
@@ -24,8 +24,8 @@ This project is a class work project from a group of student of SETEC Institute.
 
 ### Others
 
-- npm version 11.12.1
-- dotnet Entity Framework CLI version 10.0.9
+- **npm** version 11.12.1
+- **dotnet Entity Framework CLI** version 10.0.9
 - (Keep Updating...)
 
 ---
