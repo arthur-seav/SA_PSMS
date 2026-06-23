@@ -23,7 +23,7 @@ builder.Services.AddSwaggerGen(options =>
         Scheme = "bearer",
         BearerFormat = "JWT",
         In = ParameterLocation.Header,
-        Description = "貼上 token 即可，不用加 Bearer 前綴"
+        Description = "paste token only，no need to add Bearer"
     });
 
     options.AddSecurityRequirement(document => new OpenApiSecurityRequirement
@@ -40,13 +40,14 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuer = true,
             ValidateAudience = true,
             ValidateLifetime = true,            // block when expired
-            ValidateIssuerSigningKey = true,    // 驗簽章沒被竄改
+            ValidateIssuerSigningKey = true,    // check signin key
             ValidIssuer = builder.Configuration["Jwt:Issuer"],
             ValidAudience = builder.Configuration["Jwt:Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!))
         };
     });
+builder.Services.AddScoped<AuthService>();
 
 var app = builder.Build();
 
