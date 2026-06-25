@@ -8,10 +8,8 @@ using System.Security.Claims;
 
 namespace PSMS_API.Controllers;
 
-// Only Admin can access this controller.
 [ApiController]
 [Route("users")]
-// [Authorize(Roles = "Admin")]
 public class UsersController : ControllerBase
 {
     private readonly AuthService _auth;
@@ -54,17 +52,17 @@ public class UsersController : ControllerBase
     }
     
     [HttpPut("me/password")]
-    [Authorize]                          // ← 注意：不是 Admin only，任何登入者都能改自己的
+    [Authorize]
     public async Task<IActionResult> ChangeMyPassword(ChangePasswordDto dto)
     {
-        // 從 token 的 claim 讀出「我是誰」
+        // confirm logged-in user's token by claims
         var myId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
 
         var ok = await _auth.ChangeOwnPasswordAsync(myId, dto);
         if (!ok)
-            return BadRequest("舊密碼錯誤");   // 400
+            return BadRequest("Invalid Old Password.");
 
-        return NoContent();                  // 204
+        return NoContent();
     }
 
     [HttpPut("{id}/password")]
@@ -73,8 +71,8 @@ public class UsersController : ControllerBase
     {
         var ok = await _auth.ResetPasswordAsync(id, dto);
         if (!ok)
-            return NotFound("找不到這個使用者");  // 404
+            return NotFound("User not found.");
 
-        return NoContent();                  // 204
+        return NoContent();
     }
 }

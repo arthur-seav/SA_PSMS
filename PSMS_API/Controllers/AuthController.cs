@@ -10,7 +10,7 @@ public class AuthController : ControllerBase
 {
     private readonly AuthService _auth;
 
-    public AuthController(AuthService auth)   // 只依賴 AuthService 了
+    public AuthController(AuthService auth)
     {
         _auth = auth;
     }

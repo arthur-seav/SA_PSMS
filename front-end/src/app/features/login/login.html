@@ -1,0 +1,21 @@
+<div class="login-container">
+  <form class="login-card" (ngSubmit)="onLogin()">
+    <h1>PSMS Login</h1>
+
+    <label>
+      Username
+      <input type="text" name="username" [(ngModel)]="username" required />
+    </label>
+
+    <label>
+      Password
+      <input type="password" name="password" [(ngModel)]="password" required />
+    </label>
+
+    @if (errorMsg) {
+      <p class="error">{{ errorMsg }}</p>
+    }
+
+    <button type="submit">登入</button>
+  </form>
+</div>
