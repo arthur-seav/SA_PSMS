@@ -16,3 +16,6 @@ Thumbs.db
 !.vscode/extensions.json
 .idea/
 
+# // to divide sub-project for git repo
+/PSMS_API/
+/front-end/
