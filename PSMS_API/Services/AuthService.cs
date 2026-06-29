@@ -111,4 +111,36 @@ public class AuthService
         
                 return true;
             }
+            // list all user (not included PasswordHash)
+            public async Task<List<UserListDto>> GetAllUsersAsync()
+            {
+                return await _db.Users
+                    .Select(u => new UserListDto
+                    {
+                        UserId = u.UserId,
+                        Username = u.Username,
+                        FullName = u.FullName,
+                        RoleName = u.Role.RoleName,    // navigation property，EF automatically JOIN
+                        Contact = u.Contact,
+                        IsActive = u.IsActive
+                    })
+                    .ToListAsync();
+            }
+
+            // check user, if not found return null
+            public async Task<UserListDto?> GetUserByIdAsync(int userId)
+            {
+                return await _db.Users
+                    .Where(u => u.UserId == userId)
+                    .Select(u => new UserListDto
+                    {
+                        UserId = u.UserId,
+                        Username = u.Username,
+                        FullName = u.FullName,
+                        RoleName = u.Role.RoleName,
+                        Contact = u.Contact,
+                        IsActive = u.IsActive
+                    })
+                    .FirstOrDefaultAsync();
+            }
 }
